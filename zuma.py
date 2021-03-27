@@ -11,15 +11,19 @@ import avel
 folder = os.getcwd()
 
 filenames = os.listdir(folder)
-filenames.remove("zuma.py")
-filenames.remove("zuma.exe")
+
+print(filenames)
+
+if "zuma.exe" in filenames:
+    filenames.remove("zuma.exe")
+
 
 index = 0
 for filename in filenames:
-    if(os.path.exists(filename) == False):
-        print(os.path.exists(filename))
-        os.rename(filename,str(index)+".mp4")
-        index=index+1
+    if(os.path.exists(filename)):
+    	print(os.path.exists(filename))
+    	os.rename(filename,str(index)+".mp4")
+    	index=index+1
 
 print(index)
 

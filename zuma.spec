@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['zuma.py'],
-             pathex=['C:\\Users\\abhis\\Zuma\\zuma'],
+             pathex=['C:\\Users\\abhis\\Zuma\\Zuma'],
              binaries=[],
              datas=[],
              hiddenimports=[],
