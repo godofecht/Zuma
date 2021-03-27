@@ -6,4 +6,6 @@ Unfortunately, there is no way to combine these videos effectively and efficient
 
 How To Use:
 
-Copy zuma.exe into a directory containing only video files that you wish to combine. Double click on it, it will do its magic, and will output a single video titled "combined.mp4."
+1. Copy zuma.exe into a directory containing only video files that you wish to combine.
+2. Rename the directory in such a way that there are no spaces in its path name. 
+3. Double click on zuma.exe, it will do its magic, and will output a single video titled "combined.mp4."
