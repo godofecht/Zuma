@@ -2,7 +2,7 @@ from os import walk
 import os
 import string
 from pathlib import Path
-
+from natsort import natsorted
 
 
 import avel
@@ -11,7 +11,7 @@ import avel
 folder = os.getcwd()
 
 filenames = os.listdir()
-
+filenames = natsorted(filenames)
 print(filenames)
 
 if "zuma.exe" in filenames:
@@ -20,17 +20,21 @@ if "zuma.exe" in filenames:
 if "zuma.py" in filenames:
 	filenames.remove("zuma.py")
 
+if "combined.mp4" in filenames:
+        filenames.remove("combined.mp4")
+
+
 
 index = 0
 for filename in filenames:
-	if(not os.path.exists(filename)):
-		print(os.path.exists(filename))
-		os.rename(filename,str(index)+".mp4")
-		filenames[index] = str(index)+".mp4"
-		index=index+1
+	os.rename(filename,"vid"+str(index)+".mp4")
+	filenames[index] = "vid"+str(index)+".mp4"
+	index=index+1
 
-print(filenames)
+
 
 
 
 avel.combine_videos(filenames,"combined.mp4")
+
+
